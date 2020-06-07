@@ -15,7 +15,7 @@ class SiteController extends Controller
     {
         $validater = Validator::make($request->all(),[ 
             'clinic_name'=>'required|string', 
-            'telephone'=>'required|numeric|digits:10' , 
+            'telephone'=>'required|numeric|digits:9' , 
             'email'=>'required|string|email' , 
             'website'=>'required|string' , 
             'ec_available'=>'required|string' , 
@@ -56,7 +56,7 @@ class SiteController extends Controller
     {
         $validater = Validator::make($request->all(), [ 
             'name'=>'required|string',
-            'telephone'=>'required|numeric|digits:10',
+            'telephone'=>'required|numeric|digits:9',
             'email'=>'required|string',
             'website'=>'required|string',
             'is_ecno_available'=>'required|string',
@@ -64,7 +64,7 @@ class SiteController extends Controller
             'city'=>'required|string',
             'state'=>'required|string',
             'pincode'=>'required|numeric|digits:6',
-            'ec_reg_no'=>'required|numeric|digits_between:1,10', 
+            'ec_reg_no'=>'required|numeric|digits_between:1,9', 
         ]);  
         
         if(!$validater->fails()) {
