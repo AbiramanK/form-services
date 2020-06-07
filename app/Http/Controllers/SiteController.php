@@ -15,14 +15,14 @@ class SiteController extends Controller
     {
         $validater = Validator::make($request->all(),[ 
             'clinic_name'=>'required|string', 
-            'telephone'=>'required|numeric' , 
+            'telephone'=>'required|numeric|max:9' , 
             'email'=>'required|string|email' , 
             'website'=>'required|string' , 
             'ec_available'=>'required|string' , 
             'streetaddress'=>'required|string' , 
             'city'=>'required|string' , 
             'state'=>'required|string' , 
-            'pincode'=>'required|numeric',
+            'pincode'=>'required|numeric|max:6',
             'accept'=>'required|string'
         ]);      
         
