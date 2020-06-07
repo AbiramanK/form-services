@@ -96,7 +96,7 @@ class SiteController extends Controller
 
     public function getData(){
 
-         $users = DB::select('select * from site_information');
+         $users = DB::select('select * from site_information ORDER BY id DESC');
 
          return response()->json(
                 [
